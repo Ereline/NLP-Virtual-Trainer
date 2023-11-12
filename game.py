@@ -80,7 +80,7 @@ def play_game():
                 print("Вы смогли убежать от ящеров!")
             else:
                 print("Увы, ящеры догнали вас. Игра окончена.")
-                break
+                restart()
         elif choice == "3":
             print("Вы завершили игру.")
             break
@@ -121,8 +121,6 @@ def ask_question(questions, Score = 1):
             achivment(Score)
             ask_question(questions, Score = Score + 1)
             
-            
-# achivment after win
 
 
         else:
