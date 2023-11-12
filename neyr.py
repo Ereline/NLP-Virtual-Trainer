@@ -15,7 +15,7 @@ def paraphrase(text, beams=5, grams=4):
     out = model.generate(**x, encoder_no_repeat_ngram_size=grams, num_beams=beams, max_length=max_size)
     return tokenizer.decode(out[0], skip_special_tokens=True)
 
-text = open(lore.docx)
+text = open('pre_lore.txt', 'r', encoding='utf-8')
 text = text.readlines()
 post_text = paraphrase(text)
 with open('lore.txt', 'w', encoding='utf-8') as file:
